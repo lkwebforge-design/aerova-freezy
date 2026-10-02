@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Webforge Level 02 — interactive CSS 3D cards.">
+<title>LEVEL 02 — 3D Cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="level-2.css">
+</head>
+<body>
+<div class="grain"></div>
+<header><a class="brand" href="#">WEBFORGE<span>/02</span></a><span class="lesson">CSS 3D — LEVEL 02</span></header>
+<main>
+<section class="hero">
+<div class="copy reveal"><p class="eyebrow">SECOND STEP</p><h1>Make a flat<br><em>surface move.</em></h1><p>Now we turn the depth lesson into the effect you saw in the reference: a card with a real front, back and 3D tilt.</p><a href="#cards" class="button">Enter the gallery ↘</a></div>
+<div class="hero-card-zone" id="heroZone"><div class="card-shell" data-card>
+<div class="card front"><span class="number">01</span><div class="mini">WEBFORGE LAB</div><h2>AURA</h2><p>DEPTH / MOTION / LIGHT</p><i></i></div>
+<div class="card back"><span class="number">BACK</span><div class="backmark">W</div><h2>TURN<br>AROUND.</h2><p>CLICK TO FLIP</p></div></div><span class="drag">MOVE · CLICK · DRAG</span></div>
+</section>
+<section class="gallery" id="cards">
+<div class="heading reveal"><p class="eyebrow">THE CHOREOGRAPHY</p><h2>Three cards.<br>One <em>space.</em></h2></div>
+<div class="card-row">
+<div class="gallery-item reveal"><div class="small-zone"><div class="card-shell mini-card" data-card><div class="card front theme-1"><span class="number">01</span><div class="mini">COLLECTION</div><h2>AURA</h2><p>MOVE YOUR MOUSE</p><i></i></div><div class="card back"><span class="number">01</span><h2>DEPTH<br>INSIDE.</h2><p>CLICK TO RETURN</p></div></div></div><h3>AURA</h3><p class="caption">Perspective + rotation + depth</p></div><div class="gallery-item reveal"><div class="small-zone"><div class="card-shell mini-card" data-card><div class="card front theme-2"><span class="number">02</span><div class="mini">COLLECTION</div><h2>VOID</h2><p>MOVE YOUR MOUSE</p><i></i></div><div class="card back"><span class="number">02</span><h2>DEPTH<br>INSIDE.</h2><p>CLICK TO RETURN</p></div></div></div><h3>VOID</h3><p class="caption">Perspective + rotation + depth</p></div><div class="gallery-item reveal"><div class="small-zone"><div class="card-shell mini-card" data-card><div class="card front theme-3"><span class="number">03</span><div class="mini">COLLECTION</div><h2>FLUX</h2><p>MOVE YOUR MOUSE</p><i></i></div><div class="card back"><span class="number">03</span><h2>DEPTH<br>INSIDE.</h2><p>CLICK TO RETURN</p></div></div></div><h3>FLUX</h3><p class="caption">Perspective + rotation + depth</p></div>
+</div>
+</section>
+<section class="lesson reveal"><p class="eyebrow">WHAT CHANGED</p><h2>We added a <em>coordinate system.</em></h2><div class="steps"><div><b>01</b><span>Pointer → rotation</span></div><div><b>02</b><span>Click → flip</span></div><div><b>03</b><span>Drag → free rotation</span></div></div></section>
+</main><footer>WEBFORGE LABS · LEVEL 02</footer>
+<script src="level-2.js"></script>
+</body></html>
