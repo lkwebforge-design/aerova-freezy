@@ -4,3 +4,13 @@ document.querySelectorAll(".villa-card").forEach(card=>{card.addEventListener("c
 document.querySelectorAll(".card-link").forEach(btn=>btn.addEventListener("click",()=>{const text=encodeURIComponent("Hi AURA, I'd like to add "+btn.dataset.experience+" to my stay.");window.open("https://wa.me/94770000000?text="+text,"_blank")}));
 document.querySelector("#bookingForm").addEventListener("submit",e=>{e.preventDefault();const a=document.querySelector("#checkin").value,b=document.querySelector("#checkout").value,g=document.querySelector("#guests").value,v=document.querySelector("#villa").value;if(!a||!b||b<=a){alert("Please choose a valid check-in and check-out date.");return}const msg=encodeURIComponent("Hi AURA, I'd like to plan a stay.\n\nCheck-in: "+a+"\nCheck-out: "+b+"\nGuests: "+g+"\nVilla: "+v+"\n\nPlease confirm availability.");window.open("https://wa.me/94770000000?text="+msg,"_blank")});
 const menu=document.querySelector(".menu"),mobile=document.querySelector(".mobile-menu");menu.addEventListener("click",()=>mobile.classList.toggle("open"));mobile.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobile.classList.remove("open")));
+document.querySelectorAll(".hero,.feature-image,.quote-image,.booking").forEach(el=>{
+  el.addEventListener("pointermove",e=>{
+    const r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    el.style.setProperty("--px",(x*14)+"px"); el.style.setProperty("--py",(y*10)+"px");
+  });
+  el.addEventListener("pointerleave",()=>{el.style.setProperty("--px","0px");el.style.setProperty("--py","0px")});
+});
+const parallaxStyle=document.createElement("style");
+parallaxStyle.textContent=".hero-bg,.feature-image img,.quote-image img{transform:translate3d(var(--px,0),var(--py,0),0) scale(1.04);transition:transform .25s ease-out}";
+document.head.appendChild(parallaxStyle);
