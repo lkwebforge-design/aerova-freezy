@@ -14,3 +14,5 @@ document.querySelectorAll(".hero,.feature-image,.quote-image,.booking").forEach(
 const parallaxStyle=document.createElement("style");
 parallaxStyle.textContent=".hero-bg,.feature-image img,.quote-image img{transform:translate3d(var(--px,0),var(--py,0),0) scale(1.04);transition:transform .25s ease-out}";
 document.head.appendChild(parallaxStyle);
+
+document.querySelectorAll(".gallery-card").forEach(card=>{card.addEventListener("pointermove",e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.setProperty("--gx",(y*-3)+"deg");card.style.setProperty("--gy",(x*3)+"deg")});card.addEventListener("pointerleave",()=>{card.style.setProperty("--gx","0deg");card.style.setProperty("--gy","0deg")})});
