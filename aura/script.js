@@ -1,0 +1,1 @@
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.12});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));const cursor=document.querySelector(".cursor");window.addEventListener("pointermove",e=>{cursor.style.transform=`translate3d(${e.clientX}px,${e.clientY}px,0)`)});
